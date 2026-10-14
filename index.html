@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Chopper Generator & Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Menggunakan p5.js untuk rendering grafis 2D yang interaktif -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chopper Customizer</h1>
+            <p>Rancang motor chopper impian Anda secara otomatis dan interaktif.</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Area Kanvas Simulator -->
+            <div id="canvas-container"></div>
+
+            <!-- Panel Kontrol Kustomisasi -->
+            <div class="control-panel">
+                <h2>Panel Kontrol</h2>
+                
+                <div class="control-group">
+                    <label for="rakeRange">Sudut Garpu Depan (Rake): <span id="rakeVal">45</span>°</label>
+                    <input type="range" id="rakeRange" min="30" max="65" value="45">
+                </div>
+
+                <div class="control-group">
+                    <label for="handlebarRange">Tinggi Setang (Ape Hanger): <span id="handlebarVal">50</span> cm</label>
+                    <input type="range" id="handlebarRange" min="20" max="90" value="50">
+                </div>
+
+                <div class="control-group">
+                    <label for="tankType">Model Tangki:</label>
+                    <select id="tankType">
+                        <option value="peanut">Peanut Tank</option>
+                        <option value="frisco">Frisco Tank</option>
+                        <option value="coffins">Coffin Tank</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="frameColor">Warna Rangka & Bodi:</label>
+                    <input type="color" id="frameColor" value="#111111">
+                </div>
+
+                <button id="randomBtn" class="btn">Acak Desain (AI Generator)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
